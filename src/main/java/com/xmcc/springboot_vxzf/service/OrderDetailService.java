@@ -6,6 +6,8 @@ import java.util.List;
 
 public interface OrderDetailService {
     void batchInsert(List<OrderDetail> orderDetailList);
+
+    List<OrderDetail> findAllByDetailId(String orderId);
 }
 
 

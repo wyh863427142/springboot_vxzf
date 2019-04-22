@@ -23,8 +23,23 @@ spring:
     maxActive: 30 #最大连接数
     maxWait: 10000 #获得链接的最大等待时间
 
+  thymeleaf:
+    cache: true
+    check-template-location: true
+    enabled: true
+    encoding: utf-8
+    mode: HTML5
+    excluded-view-names:
+    template-resolver-order:
+
+
     jpa:
       show-sql: true  #提示sql语句
+      database: mysql
+      hibernate:
+        ddl-auto: update
+        naming:
+          strategy: org.hibernate.cfg.ImprovedNamingStrategy
 
       jackson:
         date-format: yyyy-MM-dd HH:mm:ss #日期格式化标准
